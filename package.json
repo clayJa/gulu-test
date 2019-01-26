@@ -1,0 +1,23 @@
+{
+  "name": "gulu-test",
+  "version": "0.0.1",
+  "description": "a simple practice about create somthing tools",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clayJa/gulu-test.git"
+  },
+  "keywords": [
+    "vue",
+    "tools"
+  ],
+  "author": "clayja",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/clayJa/gulu-test/issues"
+  },
+  "homepage": "https://github.com/clayJa/gulu-test#readme"
+}
