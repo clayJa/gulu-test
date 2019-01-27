@@ -1,14 +1,22 @@
 <template>
   <div>
     <button>
-      按钮
+      <g-icon :name="icon"></g-icon>
+      <slot></slot>
     </button>
   </div>
 </template>
 <script>
-export default {
-  
-}
+  import Icon from './icon'
+  export default {
+    name: 'guluButton',
+    components: {
+      "g-icon": Icon
+    },
+    props: {
+      icon: ''
+    }
+  }
 </script>
 <style lang="scss">
 </style>
