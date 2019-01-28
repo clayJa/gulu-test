@@ -44,10 +44,6 @@
     padding: 0.5em 1.165em;
     &.iconOnly {
       border-radius: 50%;
-      padding: .3em;
-    }
-    &.iconOnly {
-      border-radius: 50%;
       padding: .64em;
       & .g-icon {
         margin: 0;
