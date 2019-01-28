@@ -1,6 +1,6 @@
 <template>
-  <button class="g-button">
-    <g-icon :name="icon"></g-icon>
+  <button class="g-button" @click="$emit('click')">
+    <g-icon :name="icon" v-if="icon" :class="[iconPosition]"></g-icon>
     <slot></slot>
   </button>
 </template>
@@ -12,7 +12,14 @@
       "g-icon": Icon
     },
     props: {
-      icon: ''
+      icon: '',
+      iconPosition: {
+        type: String,
+        default: 'left',
+        validator: function (value) {
+          return value === 'left' || value === 'right'
+        }
+      }
     }
   }
 </script>
@@ -33,6 +40,10 @@
     padding: 0.5em 1.165em;
     & .g-icon {
       margin-right: 0.4em;
+    }
+    & .g-icon.right {
+      margin-left: 0.4em;
+      order: 2;
     }
     &:hover {
       border-color: var(--borderColorHover);
