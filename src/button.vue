@@ -1,5 +1,5 @@
 <template>
-  <button class="g-button" @click="$emit('click')">
+  <button :class="[{ iconOnly: iconOnly }, 'g-button']" @click="$emit('click')">
     <g-icon :name="icon" v-if="icon" :class="[iconPosition]"></g-icon>
     <slot></slot>
   </button>
@@ -13,6 +13,10 @@
     },
     props: {
       icon: '',
+      iconOnly: {
+        type: Boolean,
+        default: false
+      },
       iconPosition: {
         type: String,
         default: 'left',
@@ -38,6 +42,17 @@
     justify-content: center;
     align-items: center;
     padding: 0.5em 1.165em;
+    &.iconOnly {
+      border-radius: 50%;
+      padding: .3em;
+    }
+    &.iconOnly {
+      border-radius: 50%;
+      padding: .64em;
+      & .g-icon {
+        margin: 0;
+      }
+    }
     & .g-icon {
       margin-right: 0.4em;
     }
