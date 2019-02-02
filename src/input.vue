@@ -50,7 +50,7 @@
 		font-size: $font-size;
 		display: inline-flex;
 		align-items: center;
-
+		> :not(:last-child) {margin-right: .5em; }
 		> input {
 			border: 1px solid $border-color;
 			height: $height;
