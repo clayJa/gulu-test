@@ -22,7 +22,7 @@ new Vue({
     <g-input :value="value" @change="change"></g-input>
     <g-input :value="value" :disabled="true"></g-input>
     <g-input :value="value" :readonly="true"></g-input>
-    <g-input :value="value" :label="'用户'" ></g-input>
+    <g-input :value="value" :error="'用户'" ></g-input>
   </div>
   `
 })

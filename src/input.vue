@@ -75,6 +75,9 @@
 				border-color: #bbb;
 				color: #bbb;
 				&[readonly]{
+				}
+
+				&[readonly]{
 					cursor: not-allowed;
 				}
 			}
